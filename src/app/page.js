@@ -1,12 +1,5 @@
-'use client';
-
-import { AppProvider } from '@/context/AppContext';
-import MainApp from '@/components/MainApp';
+"use client";
 
 export default function Home() {
-  return (
-    <AppProvider>
-      <MainApp />
-    </AppProvider>
-  );
+  return <div>this is the main app</div>;
 }
