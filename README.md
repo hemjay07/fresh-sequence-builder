@@ -1,5 +1,8 @@
 # Fresh Sequence Builder
 
+
+A web UI to create and schedule 1–3 partnership emails for one contact with intelligent validation and keyboard support.
+
 **Live Demo**: [Live site](https://fresh-sequence-builder-2.netlify.app/)  
 
 
