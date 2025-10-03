@@ -1,12 +1,7 @@
 # Fresh Sequence Builder
-**UX Engineer Take-Home - Deliverable 1**
 
-**Live Demo**: https://your-deployment-url.vercel.app  
-**Candidate**: Your Name | your.email@example.com
+**Live Demo**: [https://your-deployment-url.vercel.app](https://fresh-sequence-builder-2.netlify.app/)  
 
----
-
-## ✅ Requirements Met
 
 **Screens Implemented**:
 - Template picker (3 partnership sequences)
@@ -115,8 +110,6 @@ Block = User stays in control ✓
 
 ## 🚀 Quick Start
 
-**Live**: https://your-deployment-url.vercel.app
-
 **Local**:
 ```bash
 npm install
@@ -130,11 +123,4 @@ npm run dev  # http://localhost:3000
 4. See error: "Email 2 must be after Email 1"
 5. Fix it → error clears automatically
 
----
 
-## 📬 Submission
-
-**Deliverable**: 1 of 2 (Fresh Sequence Builder UI)  
-**Status**: Complete ✅  
-**Time**: ~X hours  
-**Next**: AI Partnerships Email (Deliverable 2)
