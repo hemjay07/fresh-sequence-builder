@@ -1,15 +1,18 @@
-'use client';
+"use client";
 
-import { useApp } from '@/context/AppContext';
-import { formatDateTime } from '@/utils/dateUtils';
+import { useApp } from "@/context/AppContext";
+import { formatDateTime } from "@/utils/dateUtils";
 
 export default function SuccessScreen() {
   const { state, dispatch } = useApp();
   const { recipient, schedule, emails } = state.data;
-  const sequenceId = `SEQ-${Date.now()}-${Math.random().toString(36).substr(2, 4).toUpperCase()}`;
+  const sequenceId = `SEQ-${Date.now()}-${Math.random()
+    .toString(36)
+    .substr(2, 4)
+    .toUpperCase()}`;
 
   const handleCreateAnother = () => {
-    dispatch({ type: 'RESET' });
+    dispatch({ type: "RESET" });
   };
 
   return (
@@ -18,23 +21,31 @@ export default function SuccessScreen() {
         <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <span className="text-4xl">✓</span>
         </div>
-        <h2 className="text-3xl font-semibold text-gray-900 mb-2">Sequence Started!</h2>
+        <h2 className="text-3xl font-semibold text-gray-900 mb-2">
+          Sequence Started!
+        </h2>
         <p className="text-gray-600">
-          Your {emails.length}-email sequence to {recipient.company} is scheduled
+          Your {emails.length}-email sequence to {recipient.company} is
+          scheduled
         </p>
       </div>
 
       <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8">
         <div className="space-y-3 text-left">
-          {schedule.map(s => (
-            <div key={s.emailId} className="flex items-center gap-3 text-gray-700">
+          {schedule.map((s) => (
+            <div
+              key={s.emailId}
+              className="flex items-center gap-3 text-gray-700"
+            >
               <span className="text-blue-600">📧</span>
               <span className="font-medium">Email {s.stepNumber}:</span>
-              <span className="text-gray-600">{formatDateTime(s.scheduledTime)}</span>
+              <span className="text-gray-600">
+                {formatDateTime(s.scheduledTime)}
+              </span>
             </div>
           ))}
         </div>
-        
+
         <div className="mt-6 pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-600">
             <strong>Sequence ID:</strong> {sequenceId}
@@ -51,7 +62,7 @@ export default function SuccessScreen() {
           </li>
           <li className="flex items-start gap-2">
             <span>•</span>
-            <span>You'll receive confirmation after each email sends</span>
+            <span>You&apos;ll receive confirmation after each email sends</span>
           </li>
           <li className="flex items-start gap-2">
             <span>•</span>
