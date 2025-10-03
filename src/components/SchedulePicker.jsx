@@ -453,21 +453,20 @@ export default function SchedulePicker() {
   const [schedules, setSchedules] = useState(state.data.schedule);
   const [currentTime] = useState(new Date());
 
-  useEffect(
-    () => {
-      const validated = validateSchedule(schedules, currentTime);
-      setSchedules(validated);
-      dispatch({ type: "SET_SCHEDULE", payload: validated });
-      dispatch({
-        type: "SET_CAN_PROGRESS",
-        payload: validated.every((s) => s.status !== "invalid"),
-      });
-    },
-    [schedules.map((s) => s.scheduledTime.getTime()).join(",")],
+  useEffect(() => {
+    const validated = validateSchedule(schedules, currentTime);
+    setSchedules(validated);
+    dispatch({ type: "SET_SCHEDULE", payload: validated });
+    dispatch({
+      type: "SET_CAN_PROGRESS",
+      payload: validated.every((s) => s.status !== "invalid"),
+    });
+  }, [
+    schedules.map((s) => s.scheduledTime.getTime()).join(","),
     currentTime,
     dispatch,
-    schedules
-  );
+    schedules,
+  ]);
 
   const updateTime = (emailId, newTime) => {
     setSchedules((prev) =>

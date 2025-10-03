@@ -355,7 +355,7 @@ export default function ReviewScreen() {
               Launch Sequence?
             </h3>
             <p className="text-gray-600 mb-4 text-center">
-              You're about to schedule{" "}
+              You&apos;re about to schedule{" "}
               <span className="font-bold text-gray-900">
                 {emails.length} emails
               </span>{" "}
