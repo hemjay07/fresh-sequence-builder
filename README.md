@@ -1,6 +1,6 @@
 # Fresh Sequence Builder
 
-**Live Demo**: [https://your-deployment-url.vercel.app](https://fresh-sequence-builder-2.netlify.app/)  
+**Live Demo**: [Live site](https://fresh-sequence-builder-2.netlify.app/)  
 
 
 **Screens Implemented**:
